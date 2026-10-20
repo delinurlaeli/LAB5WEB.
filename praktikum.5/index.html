@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 5 - JavaScript Dasar | Deli Nurlaeli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Praktikum 5: JavaScript Dasar & Manipulasi HTML</h1>
+        <p><strong>Nama:</strong> Deli Nurlaeli | <strong>NIM:</strong> 312510061 | <strong>Kelas:</strong> I252A</p>
+    </header>
+
+    <main>
+        <!-- Latihan 1 & 2: Output & Pesan -->
+        <section class="card">
+            <h2>Latihan 1 & 2: Output dan Interaksi Dasar</h2>
+            <p id="pesan">Konten awal.</p>
+            <button type="button" onclick="jalankanLatihan2()">Uji Prompt & Alert</button>
+        </section>
+
+        <!-- Latihan 6: Cek Genap / Ganjil -->
+        <section class="card">
+            <h2>Latihan 6: Form Cek Bilangan Genap/Ganjil</h2>
+            <label for="bilangan">Masukkan bilangan bulat: </label>
+            <input type="number" id="bilangan" step="1">
+            <button type="button" onclick="cekBilangan()">Periksa</button>
+            <p id="hasilBilangan" class="result-text"></p>
+        </section>
+
+        <!-- Latihan 7: Ubah Warna Latar -->
+        <section class="card">
+            <h2>Latihan 7: Mengubah Warna Latar Halaman</h2>
+            <div class="button-group">
+                <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+                <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+                <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+            </div>
+        </section>
+
+        <!-- Latihan 8 & Eksperimen 10: Menu Makanan & Minuman -->
+        <section class="card">
+            <h2>Latihan 8 & Eksperimen 10: Kalkulator Menu Makanan & Minuman</h2>
+            <div class="menu-list">
+                <label><input type="checkbox" class="menu" value="5000"> Ayam Goreng - Rp5.000</label><br>
+                <label><input type="checkbox" class="menu" value="500"> Tempe - Rp500</label><br>
+                <label><input type="checkbox" class="menu" value="2500"> Telur Dadar - Rp2.500</label><br>
+                <!-- Tambahan dari Eksperimen Mandiri No 10 -->
+                <label><input type="checkbox" class="menu" value="3000"> Es Teh Manis - Rp3.000</label><br>
+                <label><input type="checkbox" class="menu" value="4000"> Mie Instan - Rp4.000</label><br>
+            </div>
+            <p class="total-box">Total Pembayaran: Rp<span id="total">0</span></p>
+        </section>
+
+        <!-- Mini Project: Kalkulator Nilai Mahasiswa -->
+        <section class="card highlight-card">
+            <h2>Mini Project: Kalkulator Nilai Mahasiswa</h2>
+            <div class="form-group">
+                <label for="inputTugas">Nilai Tugas (0-100):</label>
+                <input type="number" id="inputTugas" min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label for="inputUts">Nilai UTS (0-100):</label>
+                <input type="number" id="inputUts" min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label for="inputUas">Nilai UAS (0-100):</label>
+                <input type="number" id="inputUas" min="0" max="100">
+            </div>
+            <button type="button" onclick="hitungNilaiForm()">Hitung Nilai Akhir</button>
+            
+            <div id="hasilMiniProject" class="output-box" style="margin-top: 15px;">
+                <p><strong>Nilai Akhir:</strong> <span id="outAkhir">-</span></p>
+                <p><strong>Predikat:</strong> <span id="outPredikat">-</span></p>
+                <p><strong>Status:</strong> <span id="outStatus">-</span></p>
+            </div>
+        </section>
+
+        <!-- Eksperimen Mandiri 11: Toggle Sembunyikan/Tampilkan Elemen -->
+        <section class="card">
+            <h2>Eksperimen Mandiri 11: Sembunyikan/Tampilkan Elemen</h2>
+            <button type="button" onclick="toggleElemen()">Sembunyikan / Tampilkan Kotak Rahasia</button>
+            <div id="kotakRahasia" style="margin-top: 10px; padding: 10px; background: #e2e8f0; border-radius: 4px;">
+                Ini adalah elemen rahasia yang dapat disembunyikan atau ditampilkan menggunakan JavaScript DOM!
+            </div>
+        </section>
+    </main>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
